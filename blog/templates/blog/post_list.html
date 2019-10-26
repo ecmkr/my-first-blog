@@ -6,17 +6,12 @@
       <div>
           <h1><a href="/">Ecemin Blogu</a></h1>
       </div>
-      <div>
-          <p>published: 26.10.2019, 15:34</p>
-          <h2><a href="">Merhaba Aşkolar</a></h2>
-          <p>En güzel yemek tarifleri için sayfama beklerim finolar. Love u all xxxx </p>
+      {% for post in posts %}
+  <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
       </div>
-
-      <div>
-          <p>published: 26.10.2019, 15:39</p>
-          <h2><a href="">Hi Kalbi Kırık Yaralı Sevdalı Gönül Dostları</a></h2>
-          <p>En güzel aşk sözleri için bioma tık. İro bebişlerin tekmeler ne alemde? Fino minik kuşun zekası aynı sen. Edo slm beybi perş sınav sonrası miligram or bebek ? :P </p>
-      </div>
-
+  {% endfor %}
   </body>
 </html>
